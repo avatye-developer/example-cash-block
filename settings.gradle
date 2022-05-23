@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://artifact.bytedance.com/repository/pangle' }
+    }
+}
+rootProject.name = "CashBlock.SDK.Example"
+include ':PARTNER:Block-Example-Roulette'
+include ':PARTNER:Block-Example-Offerwall'
+include ':PUBLISHER:Block-Example-Publisher-Roulette'
+include ':PUBLISHER:Block-Example-Publisher-Offerwall'

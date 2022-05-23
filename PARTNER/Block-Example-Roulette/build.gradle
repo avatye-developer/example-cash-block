@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+android {
+    namespace 'com.avatye.sdk.example.roulette'
+    compileSdk 32
+    defaultConfig {
+        applicationId "com.avatye.sdk.example.roulette"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        release {
+            storeFile file('../../android-app-keys')
+            storePassword 'avatye!@12'
+            keyAlias 'avatye_sdk_presenter'
+            keyPassword 'avatye!@12'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    // roulette
+    implementation "org.bitbucket.avatye.sdk-cash-block:block-roulette:$cashblock_version"
+    implementation "org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version"
+}
