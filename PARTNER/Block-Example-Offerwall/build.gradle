@@ -4,12 +4,12 @@ plugins {
     id 'kotlin-kapt'
 }
 android {
-    compileSdk 32
+    compileSdk 31
     namespace 'com.avatye.sdk.example.offerwall'
     defaultConfig {
         applicationId "com.avatye.sdk.example.offerwall"
         minSdk 21
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
     }
@@ -44,12 +44,13 @@ android {
     }
 }
 dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.6.0'
-    // offerwall
-    implementation "org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version"
+    implementation "androidx.core:core-ktx:$dependency_version_ktx"
+    implementation "androidx.appcompat:appcompat:$dependency_version_appcompat"
+    implementation "com.google.android.material:material:$dependency_version_material"
     implementation "androidx.activity:activity-ktx:$dependency_version_activity"
     implementation "androidx.fragment:fragment-ktx:$dependency_version_fragment"
     implementation "androidx.work:work-runtime-ktx:$dependency_version_work_runtime"
+    //offerwall
+    //noinspection GradleDependency
+    implementation "org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version"
 }

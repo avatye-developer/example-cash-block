@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        CashBlockSDK.sessionStart(context = this)
         setContentView(vb.root)
         /** set profile */
         vb.buttonAuth.setOnClickListener {
@@ -44,6 +45,11 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         viewAppUserID()
         super.onResume()
+    }
+
+    override fun onDestroy() {
+        CashBlockSDK.sessionEnd(context = this)
+        super.onDestroy()
     }
 
     private fun viewAppUserID() {
@@ -72,7 +78,11 @@ class MainActivity : AppCompatActivity() {
         val appUserID = vb.userId.text.toString()
         CashBlockSDK.setUserProfile(
             context = this,
-            profile = Profile(userId = appUserID, birthYear = 2000, gender = GenderType.MALE)
+            profile = Profile(
+                userId = appUserID,
+                birthYear = 2000,
+                gender = GenderType.MALE
+            )
         )
         viewAppUserID()
     }

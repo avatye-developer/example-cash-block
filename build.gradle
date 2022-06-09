@@ -1,15 +1,15 @@
 buildscript {
-    ext.app_version_code = 14
+    ext.app_version_code = 220602
     ext.app_version_name = "1.0.0"
-    ext.cashblock_version = "0.0.14"
+    ext.cashblock_version = "1.0.0"
     // region # base
-    ext.dependency_version_kotlin = '1.6.20'    // target 30
-    ext.dependency_version_ktx = '1.6.0'        // target 30
-    ext.dependency_version_appcompat = '1.4.1'  // target 30
-    ext.dependency_version_material = '1.6.0'
+    ext.dependency_version_kotlin = '1.6.20'    // target 31
+    ext.dependency_version_ktx = '1.8.0'        // target 31
+    ext.dependency_version_appcompat = '1.4.2'  // target 31
+    ext.dependency_version_material = '1.6.1'
     ext.dependency_version_activity = '1.4.0'
     ext.dependency_version_fragment = '1.4.1'
-    ext.dependency_version_work_runtime = '2.7.0'
+    ext.dependency_version_work_runtime = '2.7.1'
     // endregion
 }
 plugins {
