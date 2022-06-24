@@ -1,7 +1,7 @@
 buildscript {
-    ext.app_version_code = 220604
-    ext.app_version_name = "1.0.3"
-    ext.cashblock_version = "1.0.3"
+    ext.app_version_code = 220605
+    ext.app_version_name = "1.0.4"
+    ext.cashblock_version = "1.0.4"
     // region # base
     ext.dependency_version_kotlin = '1.6.20'    // target 31
     ext.dependency_version_ktx = '1.8.0'        // target 31
