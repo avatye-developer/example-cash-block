@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:name=".App"
@@ -9,9 +8,8 @@
         android:label="룰렛(샘플)@캐시블록"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.CashBlockSDKExample">
-
+        android:theme="@style/Theme.CashBlockSDKExample"
+        android:usesCleartextTraffic="true">
         <meta-data
             android:name="enable_ap_log"
             android:value="enable" />
@@ -35,6 +33,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="fullSensor" />

@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CashBlockSDKExample">
-
         <meta-data
             android:name="enable_ap_log"
             android:value="enable" />
@@ -23,10 +22,6 @@
             android:name="cashblock.config.log"
             android:value="true" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
-
         <activity
             android:name=".IntroActivity"
             android:exported="true">
@@ -37,6 +32,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="fullSensor" />

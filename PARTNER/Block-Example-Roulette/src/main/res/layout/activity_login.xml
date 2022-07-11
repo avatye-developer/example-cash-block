@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -11,11 +12,13 @@
         android:gravity="end"
         android:orientation="horizontal">
 
+
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/acbso_ic_button_offerwall" />
+            android:src="@drawable/ic_roulette" />
+
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -29,50 +32,65 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:orientation="vertical"
-        android:visibility="visible">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
             android:layout_marginTop="25dp"
-            android:text="인증정보"
+            android:text="인증하기"
             android:textColor="#212121"
             android:textSize="24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/profile_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
             android:layout_marginTop="24dp"
+            android:text="사용할 아이디(메일주소)를 입력하세요"
             android:textColor="#212121"
-            android:textSize="18dp"
-            tools:text="email@email.com" />
+            android:textSize="14dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="#FFFFFF"
+            android:hint="example@example.com"
+            android:singleLine="true"
+            android:textSize="26dp"
+            tools:text="12345" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_enter"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="0.5dp"
             android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/button_selector"
-            android:stateListAnimator="@null"
-            android:text="오퍼월 시작하기"
-            android:textColor="#FFFFFF" />
+            android:layout_marginRight="24dp"
+            android:background="#cecece" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-</FrameLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_auth"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_selector"
+        android:text="인증하기"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
