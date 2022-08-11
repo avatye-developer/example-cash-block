@@ -48,9 +48,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$dependency_version_appcompat"
     implementation "com.google.android.material:material:$dependency_version_material"
     //universal
-    //noinspection GradleDependency
-    implementation "org.bitbucket.avatye.sdk-cash-block:block-universal:$cashblock_version"
+    implementation "org.bitbucket.avatye.sdk-cash-block:block-roulette:$cashblock_version"
     //or
-    //noinspection GradleDependency
     //implementation "org.bitbucket.avatye.sdk-cash-block:block-roulette:$cashblock_version"
 }

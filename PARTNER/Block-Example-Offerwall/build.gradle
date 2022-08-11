@@ -50,7 +50,6 @@ dependencies {
     implementation "androidx.activity:activity-ktx:$dependency_version_activity"
     implementation "androidx.fragment:fragment-ktx:$dependency_version_fragment"
     implementation "androidx.work:work-runtime-ktx:$dependency_version_work_runtime"
-    //offerwall
-    //noinspection GradleDependency
+    // only offerwall
     implementation "org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version"
 }

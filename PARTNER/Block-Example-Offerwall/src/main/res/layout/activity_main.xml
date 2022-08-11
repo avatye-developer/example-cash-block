@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/acbso_ic_button_offerwall" />
+            android:src="@drawable/ic_offerwall" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
