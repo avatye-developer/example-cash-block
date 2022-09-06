@@ -1,7 +1,7 @@
 buildscript {
-    ext.app_version_code = 220805
+    ext.app_version_code = 220806
     ext.app_version_name = "1.1.0"
-    ext.cashblock_version = "1.1.0"
+    ext.cashblock_version = "develop-SNAPSHOT"
     // region # base
     ext.dependency_version_kotlin = '1.6.20'    // target 31
     ext.dependency_version_ktx = '1.8.0'        // target 31
@@ -15,7 +15,7 @@ buildscript {
 plugins {
     id 'com.android.application' version '7.2.2' apply false
     id 'com.android.library' version '7.2.2' apply false
-    id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
 }
 task clean(type: Delete) {
     delete rootProject.buildDir

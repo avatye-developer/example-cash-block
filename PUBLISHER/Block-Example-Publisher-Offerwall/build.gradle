@@ -34,10 +34,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$dependency_version_appcompat"
     implementation "com.google.android.material:material:$dependency_version_material"
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    // offerwall
-    //noinspection GradleDependency
-    implementation("org.bitbucket.avatye.sdk-cash-block:publisher-core:$cashblock_version") {
-        transitive = true
-        exclude group: 'org.bitbucket.avatye.sdk-cash-block', module: 'block-roulette'
-    }
+    implementation "org.bitbucket.avatye.sdk-cash-block:publish-publisher:$cashblock_version"
 }

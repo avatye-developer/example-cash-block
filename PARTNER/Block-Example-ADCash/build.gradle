@@ -1,15 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
+
 android {
-    compileSdk 31
-    namespace 'com.avatye.sdk.example.offerwall'
+    compileSdk 32
     defaultConfig {
-        applicationId "com.avatye.sdk.example.offerwall"
-        minSdk 21
-        targetSdk 31
+        applicationId "com.avatye.sdk.example.adcash"
+        minSdk 16
+        multiDexEnabled true
+        targetSdk 32
         versionCode 1
         versionName "1.0"
     }
@@ -43,18 +44,17 @@ android {
         jvmTarget = '1.8'
     }
 }
+
 dependencies {
-    implementation "androidx.core:core-ktx:$dependency_version_ktx"
-    implementation "androidx.appcompat:appcompat:$dependency_version_appcompat"
-    implementation "com.google.android.material:material:$dependency_version_material"
-    implementation "androidx.activity:activity-ktx:$dependency_version_activity"
-    implementation "androidx.fragment:fragment-ktx:$dependency_version_fragment"
-    implementation "androidx.work:work-runtime-ktx:$dependency_version_work_runtime"
-    implementation("org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version") {
-        //changing = true
+    implementation ("org.bitbucket.avatye.sdk-cash-block:domain-support:$cashblock_version") {
+        changing = true
     }
-}
-configurations.all {
-    // Don't cache changing modules at all.
-    //resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    implementation ("org.bitbucket.avatye.sdk-cash-block:block-unit-adcash:$cashblock_version") {
+        changing = true
+    }
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }

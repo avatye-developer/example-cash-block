@@ -12,11 +12,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/PARTNER" />
+            <option value="$PROJECT_DIR$/PARTNER/Block-Example-ADCash" />
             <option value="$PROJECT_DIR$/PARTNER/Block-Example-Offerwall" />
             <option value="$PROJECT_DIR$/PARTNER/Block-Example-Roulette" />
-            <option value="$PROJECT_DIR$/PUBLISHER" />
-            <option value="$PROJECT_DIR$/PUBLISHER/Block-Example-Publisher-Offerwall" />
-            <option value="$PROJECT_DIR$/PUBLISHER/Block-Example-Publisher-Roulette" />
           </set>
         </option>
       </GradleProjectSettings>

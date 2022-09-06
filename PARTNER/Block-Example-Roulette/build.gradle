@@ -48,7 +48,10 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$dependency_version_appcompat"
     implementation "com.google.android.material:material:$dependency_version_material"
     //universal
-    implementation "org.bitbucket.avatye.sdk-cash-block:block-roulette:$cashblock_version"
-    //or
-    //implementation "org.bitbucket.avatye.sdk-cash-block:block-roulette:$cashblock_version"
+    implementation ("org.bitbucket.avatye.sdk-cash-block:block-roulette:$cashblock_version")
+    implementation ("org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version")
+}
+configurations.all {
+    // Don't cache changing modules at all.
+    //resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }

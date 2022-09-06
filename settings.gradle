@@ -12,10 +12,20 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url 'https://artifact.bytedance.com/repository/pangle' }
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+        maven { url "https://raw.githubusercontent.com/coupang-ads-sdk/android/main" }
+        maven {
+            url "s3://repo.cauly.net/releases"
+            credentials(AwsCredentials) {
+                accessKey "AKIAWRZUK5MFKYVSUOLB"
+                secretKey "SGOr65MOJeKBUFxeVNZ4ogITUKvcltWqEApC41JL"
+            }
+        }
     }
 }
 rootProject.name = "CashBlock.SDK.Example"
 include ':PARTNER:Block-Example-Roulette'
 include ':PARTNER:Block-Example-Offerwall'
-include ':PUBLISHER:Block-Example-Publisher-Roulette'
-include ':PUBLISHER:Block-Example-Publisher-Offerwall'
+//include ':PUBLISHER:Block-Example-Publisher-Roulette'
+//include ':PUBLISHER:Block-Example-Publisher-Offerwall'
+include ':PARTNER:Block-Example-ADCash'
