@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Banner: 300X250"
+        android:text="Banner: 320X50"
         android:textColor="#212121"
         android:textSize="18dp"
         android:textStyle="bold" />

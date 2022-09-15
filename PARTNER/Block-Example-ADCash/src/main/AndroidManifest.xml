@@ -16,7 +16,7 @@
             android:value="enable" />
         <meta-data
             android:name="cashblock.config.environment"
-            android:value="dev" />
+            android:value="live" />
         <meta-data
             android:name="cashblock.config.developer"
             android:value="true" />

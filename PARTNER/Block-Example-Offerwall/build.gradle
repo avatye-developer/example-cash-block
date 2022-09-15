@@ -50,9 +50,7 @@ dependencies {
     implementation "androidx.activity:activity-ktx:$dependency_version_activity"
     implementation "androidx.fragment:fragment-ktx:$dependency_version_fragment"
     implementation "androidx.work:work-runtime-ktx:$dependency_version_work_runtime"
-    implementation("org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version") {
-        //changing = true
-    }
+    implementation("org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version")
 }
 configurations.all {
     // Don't cache changing modules at all.

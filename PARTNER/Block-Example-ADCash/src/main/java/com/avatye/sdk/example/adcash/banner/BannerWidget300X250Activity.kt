@@ -9,6 +9,7 @@ import com.avatye.sdk.example.adcash.PlacementParcel
 import com.avatye.cashblock.domain.support.extension.extraParcel
 import com.avatye.cashblock.domain.support.extension.launch
 import com.avatye.cashblock.unit.adcash.AdError
+import com.avatye.cashblock.unit.adcash.BannerAdSize
 import com.avatye.cashblock.unit.adcash.view.BannerAdView
 import com.avatye.sdk.example.adcash.databinding.ActivityBannerWidget300x250Binding
 
@@ -38,6 +39,7 @@ class BannerWidget300X250Activity : AppCompatActivity() {
         setContentView(vb.root)
         vb.pid.text = pid
         vb.textFormWidget.text = "...."
+        vb.bannerAdView.setBannerAdSize(BannerAdSize.W320XH50)
         vb.bannerAdView.setPlacementId(placementId = pid)
         vb.bannerAdView.listener = object : BannerAdView.Listener {
             override fun onLoaded() {
