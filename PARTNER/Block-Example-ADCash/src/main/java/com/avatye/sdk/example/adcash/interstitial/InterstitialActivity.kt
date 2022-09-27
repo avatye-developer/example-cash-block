@@ -65,7 +65,7 @@ class InterstitialActivity : AppCompatActivity() {
                         vb.interstitialLog.text = vb.interstitialLog.text.toString() + "#$index: onClosed { complete: $completed }...\n"
                     }
 
-                    override fun ondFailed(error: AdError) {
+                    override fun onFailed(error: AdError) {
                         it.isEnabled = true
                         vb.interstitialLog.text = vb.interstitialLog.text.toString() + "#$index: ondFailed: $error\n"
                     }

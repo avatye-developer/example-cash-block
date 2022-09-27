@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.avatye.cashblock.CashBlockSDK
-import com.avatye.cashblock.base.component.entity.user.Profile
-import com.avatye.cashblock.business.model.specify.GenderType
+import com.avatye.cashblock.provider.Gender
+import com.avatye.cashblock.provider.Profile
 import com.avatye.sdk.example.roulette.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                     profile = Profile(
                         userId = appUserID,
                         birthYear = 2000,
-                        gender = GenderType.MALE
+                        gender = Gender.FEMALE
                     )
                 )
                 startActivity(Intent(this, MainActivity::class.java))

@@ -50,7 +50,9 @@ dependencies {
     implementation "androidx.activity:activity-ktx:$dependency_version_activity"
     implementation "androidx.fragment:fragment-ktx:$dependency_version_fragment"
     implementation "androidx.work:work-runtime-ktx:$dependency_version_work_runtime"
-    implementation("org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version")
+    implementation("org.bitbucket.avatye.sdk-cash-block:block-offerwall:$cashblock_version") {
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
 }
 configurations.all {
     // Don't cache changing modules at all.

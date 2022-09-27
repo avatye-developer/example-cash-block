@@ -39,7 +39,7 @@ class BannerWidget300X250Activity : AppCompatActivity() {
         setContentView(vb.root)
         vb.pid.text = pid
         vb.textFormWidget.text = "...."
-        vb.bannerAdView.setBannerAdSize(BannerAdSize.W320XH50)
+        vb.bannerAdView.setBannerAdSize(BannerAdSize.W300XH250)
         vb.bannerAdView.setPlacementId(placementId = pid)
         vb.bannerAdView.listener = object : BannerAdView.Listener {
             override fun onLoaded() {
